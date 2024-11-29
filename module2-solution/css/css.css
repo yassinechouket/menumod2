@@ -1,0 +1,102 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for header */
+header {
+    background-color: #f0f0f0;
+    color: rgb(21, 20, 20);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Container for sections */
+.container {
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: space-around; /* Space between sections */
+    align-items: flex-start; /* Align at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 20px;
+}
+
+/* Section styles */
+section {
+    float: left; /* Float sections to align in a row */
+    padding: 40px 20px 20px; /* Top padding to push text down */
+    margin: 10px; /* Margin for spacing between sections */
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    position: relative;
+}
+/* Section title styles */
+.section-title1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #b46b6b;
+    border: 1px solid black;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+.section-title2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #772c2c;
+    border: 1px solid black;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+.section-title3 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #ccbb68;
+    border: 1px solid black;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+
+
+
+/* Media query for desktop (992px and above) */
+@media only screen and (min-width: 992px) {
+    section {
+        width: 30%; /* Each section takes up 1/3 of container width */
+    }
+}
+
+/* Media query for tablet (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    section {
+        width: 45%; /* First 2 sections take almost half of container width */
+    }
+    section:nth-child(3) {
+        width: 94%; /* 3rd section takes the full width */
+        margin-left: 3%; /* Center align the section */
+    }
+}
+
+/* Media query for mobile (767px and below) */
+@media only screen and (max-width: 767px) {
+    section {
+        width: 94%; /* Each section takes up the entire row */
+        margin: 10px auto; /* Center align with margin */
+    }
+}
+
+/* Optional: Font family and sizes */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 1.75rem; /* 75% larger than the base font size */
+}
+
+p {
+    font-size: 1rem; /* Base font size */
+}
